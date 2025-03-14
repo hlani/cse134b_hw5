@@ -1,0 +1,281 @@
+/* Global CSS */
+
+:root {
+    --primary-color: #a6c3ce;
+    --secondary-color: #87ae73;
+    --font-primary: "Atkinson Hyperlegible Mono", "Courier New", monospace;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items */
+    align-items: center;
+    max-width: 100%; /* Prevents overflow */
+    padding: 0 10px;
+}
+
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: brown;
+    padding: 10px;
+}
+
+/* Add an underline effect on hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: brown;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show underline on hover */
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* LinkedIn Icon */
+.linkedin-icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Style LinkedIn Icon */
+.linkedin-icon img {
+    width: 24px; /* Adjust size */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add a hover effect */
+.linkedin-icon img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .linkedin-icon {
+        position: relative;
+        margin-left: 5px;
+    }
+
+    /* Adjust the image size for mobile */
+    .linkedin-icon img {
+        width: 20px;
+    }
+}
+
+
+
+/* custom semantics used in the index.html */
+.highlight-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: var(--secondary-color)
+}
+
+/* stacks text in the highlight box vertical */
+.highlight-text {
+    display: flex;              /* Enables Flexbox */
+    flex-direction: column;     /* Stacks text vertically */
+    align-items: center;        /* Centers text horizontally */
+    text-align: center;         /* Ensures text is centered */
+    flex: 1;                    /* Allows text to take available space */
+}
+
+/* Specific styling for your profile image */
+.profile-photo {
+    width: 100%; /* Makes it responsive within its container */
+    max-height: 50dvh;
+    max-width: 300px; /* Limits size on larger screens */
+    height: auto; /* Ensures proportions remain intact */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin: 0 auto; /* Centers image */
+}
+
+/*  on smaller screens/devices, stacks the images w text*/
+@media (max-width: 768px) {
+    .highlight-box {
+        flex-direction: column; /* Stack text and image */
+        text-align: center; /* Center content */
+    }
+
+    .profile-photo {
+        max-width: 200px; /* Adjust size for mobile */
+    }
+}
+
+header, footer {
+    width: 100dvw; /* Full dynamic viewport width */
+}
+
+
+body {
+    font-family: var(--font-primary, Arial, sans-serif); /* added different fallbacks*/ 
+    font-display: swap;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Default weight */
+    border: 2px solid black;
+    padding: 20px;
+    background-color:var(--primary-color, blue);
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Balance header spacing */
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Ensure sections are centered */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1 {
+    color: color-mix(in srgb, red 50%, green 40%);
+}
+
+/* Simple Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-adjust columns */
+    gap: 10px; /* Space between items */
+    padding: 10px;
+}
+
+/* Ensure images & videos resize properly */
+.gallery-grid img,
+.gallery-grid video {
+    width: 100%;  /* Make media responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop nicely */
+}
+
+/* Center text in figcaption */
+figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+
+/* adjust globe in index.html*/
+.globe-gif {
+    width: 50px; /* Adjust size */
+    height: auto;
+    margin-left: 2px; /* Adds spacing from text */
+}
+
+/* Responsive: Reduce size for mobile */
+@media (max-width: 600px) {
+    .globe-gif {
+        width: 30px;
+    }
+}
+
+.animated-arrow {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-color, #3498db);
+    margin-top: 10px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* adds bounce effect to arrow */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+.animated-arrow:hover {
+    color: brown;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:has(img) {
+    background-color: color-mix(in srgb, var(--primary-color) 70%, white 30%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Mini Gallery Preview */
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Style images */
+.gallery-preview img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for images */
+.gallery-preview img:hover {
+    transform: scale(1.05);
+}
+
+/* Link to Full Gallery */
+.view-more {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: brown;
+    text-decoration: underline;
+}
