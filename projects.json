@@ -10,7 +10,7 @@
     {
         "title": "Project Two",
         "image": "https://via.placeholder.com/150",
-        "description": "placeholder for another project.",
+        "description": "this loaded from the remote server",
         "link": "https://example.com"
     }
 ]
