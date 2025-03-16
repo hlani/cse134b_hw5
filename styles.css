@@ -86,7 +86,6 @@
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    border: 2px solid black;
     padding: 15px;
     margin: 20px 0;
     background-color: var(--secondary-color)
@@ -165,6 +164,7 @@ main {
     align-items: center;
     max-width: 90%;
     margin: 0 auto;
+    /* background-color: var(--secondary-color, #87ae73); */
 }
 
 ul {
@@ -185,6 +185,7 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Auto-adjust columns */
     gap: 10px; /* Space between items */
     padding: 10px;
+    background-color: var(--secondary-color)
 }
 
 /* Ensure images & videos resize properly */
@@ -199,7 +200,7 @@ h1 {
 figcaption {
     text-align: center;
     font-size: 0.9rem;
-    color: gray;
+    color: brown;
 }
 
 
@@ -248,6 +249,9 @@ section:has(img) {
 }
 
 
+.mini-gallery{
+    background-color: color-mix(in srgb, var(--secondary-color) 80%, black 20%);
+}
 /* Mini Gallery Preview */
 .gallery-preview {
     display: grid;
@@ -352,4 +356,14 @@ button:hover {
     width: 100%;
     height: 100vh; /* Full viewport height */
     border: none; /* Removes iframe border */
+}
+
+/* Optional: Keep content readable */
+.about-page main {
+    background-color: var(--secondary-color); /* Light background for text readability */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 20px auto;
 }
