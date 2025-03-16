@@ -1,0 +1,16 @@
+
+[
+    {
+        "title": "Flappy-Bird",
+        "image": "images/fb.png",
+        "description": "Recreated the flappy bird game with only JS",
+        "link": "https://github.com/lhailani/flappy-bird"
+    },
+    
+    {
+        "title": "Project Two",
+        "image": "https://via.placeholder.com/150",
+        "description": "placeholder for another project.",
+        "link": "https://example.com"
+    }
+]
