@@ -293,3 +293,46 @@ section:has(img) {
 project-card {
     display: inline-block;
 }
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 10px;
+}
+
+/* Standard Button Styling */
+button {
+    background-color: var(--secondary-color, #87ae73);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px; /* ✅ Fixed width for all buttons */
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 80%, black 20%);
+}
+
+/* Loading Message Styling */
+#statusMessage {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design: Make buttons full-width on smaller screens */
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+}
