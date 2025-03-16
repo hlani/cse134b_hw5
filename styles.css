@@ -133,7 +133,7 @@ body {
     font-display: swap;
     font-optical-sizing: auto;
     font-weight: 400; /* Default weight */
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 20px;
     background-color:var(--primary-color, blue);
 }
@@ -278,4 +278,18 @@ section:has(img) {
     font-size: 1rem;
     color: brown;
     text-decoration: underline;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Project Card Styling */
+project-card {
+    display: inline-block;
 }
