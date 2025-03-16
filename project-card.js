@@ -2,13 +2,19 @@ class ProjectCard extends HTMLElement {
     constructor() {
         super();
 
-        // Attach Shadow DOM
+        // attach the DOM 
         this.attachShadow({ mode: "open" });
 
-        // Create Card Structure
+        // create the card structure
         const card = document.createElement("div");
         card.classList.add("card");
 
+    //  This element should consist of, at minimum:
+    // <h2> tag, ex: for your project name
+    // <picture> tag with effective use of alt text
+    // Some space for a short description
+    // A hyperlink for further reading (<a> tag  is fine)
+        
         card.innerHTML = `
             <h2></h2>
             <picture>
