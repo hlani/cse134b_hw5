@@ -367,3 +367,176 @@ button:hover {
     max-width: 80%;
     margin: 20px auto;
 }
+
+
+/* CRUD Page Styling */
+.crud-page {
+    background-color: var(--secondary-color, #87ae73);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: var(--secondary-color, #5a915a);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 80%, black 20%);
+}
+
+/* Only apply these styles to crud.html */
+.crud-page {
+    background-color: var(--secondary-color, #87ae73);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Center Content */
+.crud-page main {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CRUD Form Styling */
+.crud-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.crud-page form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.crud-page input, .crud-page textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.crud-page button {
+    background-color: var(--secondary-color, #5a915a);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.crud-page button:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 80%, black 20%);
+}
+
+/* CRUD Project List */
+.crud-page #projectList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.crud-page .project-item {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.crud-page .project-item strong {
+    font-size: 1.2rem;
+}
+
+.crud-page .project-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.crud-page .project-item a {
+    display: inline-block;
+    color: var(--secondary-color, #5a915a);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.crud-page .project-item a:hover {
+    text-decoration: underline;
+}
+
+/* CRUD Edit & Delete Buttons */
+.crud-page .project-item button {
+    padding: 8px 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.crud-page .project-item button.edit {
+    background-color: #007BFF;
+}
+
+.crud-page .project-item button.delete {
+    background-color: red;
+}
+
+.crud-page .project-item button.edit:hover {
+    background-color: #0056b3;
+}
+
+.crud-page .project-item button.delete:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crud-page main {
+        max-width: 90%;
+    }
+
+    .crud-page input, .crud-page textarea, .crud-page button {
+        font-size: 1rem;
+    }
+}

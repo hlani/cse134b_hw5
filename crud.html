@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Manage Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<body class="crud-page">
+    <header>
+        <h1>Manage Projects</h1>
+        <a href="projects.html">Back to Projects</a>
+    </header>
+
+    <main>
+        <h2>Add / Edit Project</h2>
+        <form id="projectForm">
+            <input type="hidden" id="editIndex">
+            <label>Title:</label>
+            <input type="text" id="title" required>
+            
+            <label>Image URL:</label>
+            <input type="text" id="image" required>
+            
+            <label>Description:</label>
+            <textarea id="description" required></textarea>
+            
+            <label>Link:</label>
+            <input type="url" id="link" required>
+
+            <button type="submit">Save Project</button>
+        </form>
+
+        <h2>Existing Projects</h2>
+        <ul id="projectList"></ul>
+    </main>
+
+    <script src="crud.js"></script>
+</body>
+</html>
